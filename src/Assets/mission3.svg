@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="100px" viewBox="0 0 112 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(3.000000, 2.000000)">
+            <path d="M54.6267342,0 L54.5050505,31.7772412" id="Line-3" stroke="#C6574A" stroke-width="4" stroke-linecap="square"></path>
+            <polyline id="Line-4" stroke="#C6574A" stroke-width="4" stroke-linecap="square" points="55.5151515 0 71.6767677 0 66.192938 6.06060606 71.4005592 12.1212121 55.5151515 12.1212121"></polyline>
+            <polyline id="Line-6" stroke="#000000" stroke-width="4" stroke-linecap="square" points="0 80.0261651 35.3662305 27.2727273 72.7272727 86.8686869"></polyline>
+            <polyline id="Line-6" stroke="#000000" stroke-width="4" stroke-linecap="square" transform="translate(69.131313, 57.070707) scale(-1, 1) translate(-69.131313, -57.070707) " points="32.2626263 81.4667058 68.8441874 27.2727273 106 86.8686869"></polyline>
+            <path d="M53.7623909,28.2828283 L90.8787879,87.7036804 C74.503135,94.0883417 62.1310027,97.2806724 53.7623909,97.2806724 C45.3937791,97.2806724 33.1867869,94.0883417 17.1414141,87.7036804 L53.7623909,28.2828283 Z" id="Triangle" fill="#FFFFFF"></path>
+            <polyline id="Line-7" stroke="#000000" stroke-width="4" stroke-linecap="square" points="41.5764732 49.9602808 45.7123198 62.6262626 54.5781795 49.9602808 62.9645661 62.3561129 66.8945347 49.9602808"></polyline>
+            <polyline id="Line-6" stroke="#000000" stroke-width="4" stroke-linecap="square" points="17.1414141 86.8686869 54.264468 27.2727273 91.8888889 86.8686869"></polyline>
+        </g>
+    </g>
+</svg>

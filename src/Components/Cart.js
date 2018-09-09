@@ -10,42 +10,42 @@ const Cart = props => {
   if(products.length > 0 ){
     return (
       <div className="cart">
-        <table className="cart-content">
-          <tbody>
-            <tr className="cart-header">
-              <td></td>
-              <td></td>
-              <td><b>Title</b></td>
-              <td><b>Description</b></td>
-              <td><b>Price</b></td>
-            </tr>
-            {props.cartProducts.map((product, index) => (
-                <tr className="cart-product-row">
-                  <td className="remove-product">
-                    <a onClick={ () => props.removeProduct(index, product.price)}>✖</a>
-                  </td>
-                  <td className="cart-product-image">
-                    <img src={product.image}/>
-                  </td>
-                  <td className="cart-product-title">
-                    <h3>{product.title}</h3>
-                  </td>
-                  <td className="cart-product-description">
-                    <p>{product.description}</p>
-                  </td>
-                  <td className="cart-product-price">
-                    <span>${product.price}</span>
-                  </td>
-                </tr>
-            ))}
-            <tr className="cart-total-row">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><b>${total}</b></td>
-            </tr>
-          </tbody>
+        <div className="cart-left">
+          <table className="cart-table">
+            <tbody>
+              <tr className="cart-header">
+                <td></td>
+                <td><b>Title</b></td>
+                <td><b>Price</b></td>
+                <td><b>Remove</b></td>
+              </tr>
+              {props.cartProducts.map((product, index) => (
+                  <tr className="cart-product-row">
+                    <td className="cart-product-image">
+                      <img src={product.image}/>
+                    </td>
+                    <td className="cart-product-title">
+                      <h3>{product.title}</h3>
+                    </td>
+                    <td className="cart-product-price">
+                      <span>${product.price}</span>
+                    </td>
+                    <td className="remove-product">
+                      <a onClick={ () => props.removeProduct(index, product.price)}>✖</a>
+                    </td>
+                  </tr>
+              ))}
+              <tr className="cart-total-row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>${total}</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="cart-right">
           <div className="cart-checkout">
             <Checkout
                name={'Checkout'}
@@ -55,7 +55,7 @@ const Cart = props => {
             <p> or </p>
             <Link to="/products">Continue Shopping</Link>
           </div>
-        </table>
+        </div>
       </div>
     )
   }

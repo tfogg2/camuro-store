@@ -5,7 +5,7 @@ const Product = props => {
   return(
     <div className="product">
       <div className="product-image">
-        <img src={props.image}/>
+        <img src={props.image} onClick={props.toggleModal}/>
       </div>
       <div className="product-title">
         <h2>{props.title}</h2>

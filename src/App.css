@@ -161,7 +161,6 @@ h1{
 }
 .right-nav ul li{
   display: inline-block;
-  margin-top: -3px;
   transition: background-color 0.5s ease;
   float: left;
   cursor: pointer;
@@ -172,7 +171,7 @@ h1{
 .right-nav ul .insta-link{
   width: 60px;
   height: 60px;
-  padding: 14px 10px 10px 10px;
+  padding: 10px;
   box-sizing: border-box;
 }
 .insta-link .instagram{
@@ -715,32 +714,48 @@ h1{
 
 /* CART */
 
+@media(max-width: 625px) {
+  .cart .cart-left{
+    width: 100%;
+  }
+}
+
 .cart{
   color: #000;
   text-align:center;
   padding: 60px 0;
   background: #fff;
-  min-height: 200px;
+  min-height: 95vh;
   box-sizing: border-box;
 }
-.cart-content{
+.cart-left{
+  width: 60%;
+  float: left;
+  box-sizing: border-box;
+}
+.cart-right{
+  width: 40%;
+  float: right;
+}
+.cart-table{
   background: #fff;
-  width: 80%;
-  margin: 0 10%;
-  padding: 40px 40px 80px 40px;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 1%;
+  padding: 0px;
   text-align: center;
   box-sizing: border-box;
   overflow: overlay;
-  border: 1px solid #e8e8e8;
 }
-.cart-content .cart-total-row td{
+.cart-table .cart-total-row td{
   border-bottom: none
 }
-.cart-content .cart-header td{
+.cart-table .cart-header td{
   border-bottom: none;
 }
-.cart-content td{
-  padding: 30px 10px;
+.cart-table td{
+  padding: 20px;
+  width: 25%;
   border-bottom: 1px solid #e8e8e8;
 }
 .cart-product-title{
@@ -753,24 +768,18 @@ h1{
   width: 200px;
 }
 .cart-product-image img{
-  width: 200px;
+  width: 100%;
 }
 .cart-product-price{
 }
-.cart-content .remove-product {
+.cart-table .remove-product {
   width: 14px;
-  border-bottom: none;
 }
 .remove-product a{
-  float: left;
-  position: relative;
-  top: -85px;
   cursor: pointer;
 }
 .cart-checkout{
   width: 200px;
-  position: absolute;
-  right: 10%;
 }
 .cart-checkout a, p{
   display: block;
@@ -783,6 +792,36 @@ h1{
 .App .product-content{
   width: 100%;
   margin: 0;
+}
+.product-box{
+  display: inline-block;
+}
+.invisible{
+  display: none;
+}
+.backdrop.product-backdrop{
+  height: 100vh;
+  top: 60px;
+}
+.backdrop.product-backdrop .modal-header{
+  position: absolute;
+}
+.product-modal.modal.visible-item img{
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.product-info{
+  float: right;
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.product-info h2{
+  padding: 0;
+  font-size: 38px;
 }
 .product-nav{
   color: #000;
@@ -812,14 +851,13 @@ h1{
   color: #000;
   overflow: overlay;
   padding: 20px 0;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
 }
 .product{
-  width: 28%;
-  min-width: 200px;
-  margin: 20px 2.5%;
-  float: left;
+  width: 250px;
+  margin: 0px auto 40px auto;
+  padding: 20px;
+  display: inline-block;
 }
 .product button{
   height: 40px;
@@ -827,8 +865,22 @@ h1{
   margin: 5px 0;
   background: #c6574a;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: opacity .5s ease;
+}
+.product-modal button{
+  height: 40px;
+  width: 120px;
+  margin: 5px 0;
+  background: #c6574a;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
   outline: none;
   transition: opacity .5s ease;
@@ -836,8 +888,10 @@ h1{
 .product button:hover{
   opacity: .8;
 }
+.product-modal button:hover{
+  opacity: .8;
+}
 .product-image img{
-  min-height: 200px;
   background-color: #f5f5f5;
   width: 100%;
 }

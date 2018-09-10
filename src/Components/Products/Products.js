@@ -90,13 +90,14 @@ class Products extends Component {
       AllProducts,
     }) => (
       <div className="content product-content">
-        <div className="products-header">
-          <h1>Shop Now!</h1>
-          <ul className="product-nav">
-            {ListCategories(productCategories, setCategory )}
-          </ul>
+        <div className={productClass}>
+          <div className="products-header">
+            <h1>Shop Now!</h1>
+            <ul className="product-nav">
+              {ListCategories(productCategories, setCategory )}
+            </ul>
+          </div>
         </div>
-
         <div className="products">
           <ProductItems state={state} />
 

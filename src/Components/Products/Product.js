@@ -15,13 +15,15 @@ const Product = props => {
           <div>
             <p>{props.description}</p>
           </div>
-          <div>
+        </div>
+        <div className="description-cta">
+          <div className="product-price">
             <span>Price: <b>${props.price}</b></span>
           </div>
+          <Link to={`/cart`} className="add-product" onClick={ () => props.addProduct(props.title, props.category, props.description, props.price, props.index, props.image)}>
+            <button>Add Product</button>
+          </Link>
         </div>
-        <Link to={`/cart`} className="add-product" onClick={ () => props.addProduct(props.title, props.category, props.description, props.price, props.index, props.image)}>
-          <button>Add Product</button>
-        </Link>
       </div>
     </div>
   )

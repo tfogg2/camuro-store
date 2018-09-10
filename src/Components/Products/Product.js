@@ -7,15 +7,22 @@ const Product = props => {
       <div className="product-image">
         <img src={props.image} onClick={props.toggleModal}/>
       </div>
-      <div className="product-title">
-        <h2>{props.title}</h2>
-      </div>
       <div className="product-description">
-        <p>{props.description}</p>
+        <div className="description-text">
+          <div>
+            <h2>{props.title}</h2>
+          </div>
+          <div>
+            <p>{props.description}</p>
+          </div>
+          <div>
+            <span>Price: <b>${props.price}</b></span>
+          </div>
+        </div>
+        <Link to={`/cart`} className="add-product" onClick={ () => props.addProduct(props.title, props.category, props.description, props.price, props.index, props.image)}>
+          <button>Add Product</button>
+        </Link>
       </div>
-      <Link to={`/cart`} className="add-product" onClick={ () => props.addProduct(props.title, props.category, props.description, props.price, props.index, props.image)}>
-        <button>Add Product</button>
-      </Link>
     </div>
   )
 }

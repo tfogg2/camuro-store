@@ -792,9 +792,16 @@ h1{
 .App .product-content{
   width: 100%;
   margin: 0;
+  height: 90vh;
+  overflow: hidden;
 }
-.product-box{
-  display: inline-block;
+.products-header{
+  height: 120px;
+  box-shadow: 1px 1px 8px #676767;
+  padding-top: 20px;
+}
+.products-header h1{
+  color: #000;
 }
 .invisible{
   display: none;
@@ -825,13 +832,14 @@ h1{
 }
 .product-nav{
   color: #000;
-  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+  box-sizing: border-box;
   display: block;
-  border-bottom: 1px solid #f3f3f3;
 }
 .product-nav li{
   display: inline-block;
-  margin: 40px;
+  margin: 0 40px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -849,15 +857,39 @@ h1{
 }
 .products{
   color: #000;
-  overflow: overlay;
+  overflow: scroll;
+  height: 600px;
   padding: 20px 0;
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
 }
 .product{
-  width: 250px;
-  margin: 0px auto 40px auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
   padding: 20px;
-  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #d9d9de;
+  margin-bottom: 20px;
+}
+.product-description .description-text{
+  width: 75%;
+  float: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.product-description .description-text h2{
+  padding: 0;
+}
+.product-description .description-text h2, p, span{
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.add-product{
+  height: 40px;
+  float: right;
+  margin-top: 6.5%;
 }
 .product button{
   height: 40px;
@@ -891,12 +923,18 @@ h1{
 .product-modal button:hover{
   opacity: .8;
 }
+.product-image{
+  width: 25%;
+  display: inline-block;
+}
 .product-image img{
   background-color: #f5f5f5;
   width: 100%;
 }
-.product-title, .product-description{
-  margin: 5px 0;
+.product-description{
+  width: 75%;
+  float: right;
+  text-align: left;
 }
 .product-title{
   height: 40px;

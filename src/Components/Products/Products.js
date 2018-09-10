@@ -90,9 +90,13 @@ class Products extends Component {
       AllProducts,
     }) => (
       <div className="content product-content">
-        <ul className="product-nav">
-          {ListCategories(productCategories, setCategory )}
-        </ul>
+        <div className="products-header">
+          <h1>Shop Now!</h1>
+          <ul className="product-nav">
+            {ListCategories(productCategories, setCategory )}
+          </ul>
+        </div>
+
         <div className="products">
           <ProductItems state={state} />
 
@@ -109,8 +113,8 @@ const PRODUCTS = [
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
-  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
-  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Accessories", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Bodies", price: 100},
 ]
 
 const uniqueItems = (x, i, array) => array.indexOf(x) === i

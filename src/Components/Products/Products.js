@@ -72,6 +72,10 @@ class Products extends Component {
                   <div className="backdrop product-backdrop">
                     <div className="modal-header">
                       <span className="close-modal" onClick={this.toggleModal}><img src={require('../../Assets/back-arrow.svg')} alt="back-arrow"/></span>
+                      <h2 className="modal-header-title">{title}</h2>
+                      <Link to={`/cart`} className="add-product" onClick={ () => this.props.addProduct(title, product, description, price, index, image)}>
+                        <button className="addProductBtn">Add Product</button>
+                      </Link>
                     </div>
                     <div className="modal-items">
                       <ProductModal show={this.state.isOpen} onClose={this.toggleModal} addProduct={this.state.addProduct} stopClose={this.stopClose} product={product} image={image} title={title} description={description} price={price}></ProductModal>
@@ -110,6 +114,12 @@ class Products extends Component {
 
 // data
 const PRODUCTS = [
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Accessories", price: 100},
+  { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Bodies", price: 100},
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},
   { image: require("../../Assets/CanonSun.png"), title: "Nikon 35mm", description: "This is an example description about some camera shenanigans.", category: "Lenses", price: 100},

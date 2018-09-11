@@ -32,12 +32,8 @@ class ProductModal extends Component {
       <div className={modalClass} onClick={this.props.stopClose}>
         <img src={this.props.image} alt={this.props.title} />
         <div className="product-info">
-          <h2>{this.props.title}</h2>
+          <span><b>${this.props.price}</b></span>
           <p>{this.props.description}</p>
-          <span>Price: <b>${this.props.price}</b></span>
-          <Link to={`/cart`} className="add-product" onClick={ () => this.props.addProduct(this.props.title, this.props.product, this.props.description, this.props.price, this.props.index, this.props.image)}>
-            <button>Add Product</button>
-          </Link>
         </div>
       </div>
     );

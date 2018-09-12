@@ -38,7 +38,7 @@ class Header extends Component {
                   </button>
                 </NavLink>
               </li>
-              <li className="insta-link ">
+              <li className="insta-link">
                 <a href="https://www.instagram.com/camuroco/" target="_blank" alt="camuro-instagram" >
                   <div className="instagram"></div>
                 </a>

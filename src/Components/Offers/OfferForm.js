@@ -187,7 +187,8 @@ class OfferForm extends Component {
     return(
       <div className="sell-content">
         <div className="sell-form-content">
-          <h3>Get An Offer</h3>
+          <h1>Get An Offer</h1>
+          <span>* We will never sell or distribute your information.</span>
           <form className="sell-form" id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <div className="personal-info">
               <h4>Contact Info</h4>

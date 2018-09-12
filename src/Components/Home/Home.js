@@ -29,6 +29,7 @@ class Home extends Component {
 
   render(){
     const homeClass = this.state.loaded ? 'home-bg visible' : 'home-bg'
+    const limit = 9
     return(
       <div className="home">
         <div className="splash-background">
@@ -39,12 +40,18 @@ class Home extends Component {
           <About offer={this.OfferForm} ref={(section) => { this.About = section; }}/>
           <div className="home-gallery" ref={(section) => { this.Gallery = section; }}>
             <div className='home-content'>
-              <Gallery />
+              <Gallery limit={limit}/>
+              <Link to="/gallery" alt="gallery">
+                <button className="gallery-btn">
+                  See More Photos
+                </button>
+              </Link>
             </div>
           </div>
-          <OfferForm ref={(section) => { this.OfferForm = section; }}/>
+          <div className="home-offer">
+            <OfferForm ref={(section) => { this.OfferForm = section; }}/>
+          </div>
         </div>
-        <Footer ref={(section) => { this.Footer = section; }}/>
       </div>
     )
   }

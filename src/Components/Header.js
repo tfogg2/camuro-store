@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import scrollToComponent from 'react-scroll-to-component'
 
 class Header extends Component {
@@ -17,25 +17,29 @@ class Header extends Component {
         <div className="nav">
           <div  className="right-nav">
             <ul className="navLinks">
-              <li className="scrollLink no-mobile">
-                <button onClick={() => scrollToComponent(this.Gallery, { offset: 0, align: 'top', duration: 1500})}>
-                  Photos
-                </button>
-              </li>
-              <li className="scrollLink no-mobile">
-                <button onClick={() => scrollToComponent(this.OfferForm, { offset: 0, align: 'top', duration: 1500})}>
-                  Sell Gear
-                </button>
-              </li>
-              <li className="no-mobile coming-soon">
-                <Link to="/products">
+              <li className="shop-link">
+                <NavLink to="/products">
                   <button>
-                    Shop <i>(Coming Soon)</i>
+                    Shop
                   </button>
-                </Link>
+                </NavLink>
+              </li>
+              <li className="scrollLink no-mobile">
+                <NavLink to="/gallery">
+                  <button>
+                    Photos
+                  </button>
+                </NavLink>
+              </li>
+              <li className="scrollLink no-mobile">
+                <NavLink to="/offer">
+                  <button>
+                    Sell Gear
+                  </button>
+                </NavLink>
               </li>
               <li className="insta-link ">
-                <a href="https://www.instagram.com/camuro.co/" target="_blank" alt="camuro-instagram" >
+                <a href="https://www.instagram.com/camuroco/" target="_blank" alt="camuro-instagram" >
                   <div className="instagram"></div>
                 </a>
               </li>

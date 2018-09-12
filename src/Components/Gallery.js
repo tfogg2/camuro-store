@@ -28,6 +28,7 @@ class Gallery extends Component {
       this.setState({
         loaded: true
       })
+      window.scrollTo(0, 0)
     }, 100 )
   }
 
@@ -57,6 +58,7 @@ class Gallery extends Component {
 
   render(){
     const galleryClass = this.state.loaded ? 'gallery-items visible' : 'gallery-items'
+    const limit = this.props.limit ? this.props.limit : 100
     const { currentPhotos, currentPage, totalPages } = this.state
     const allPhotos = this.state
     const totalPhotos = allPhotos.length
@@ -65,7 +67,7 @@ class Gallery extends Component {
 
     const Gallery = ({state:{ gallery }}) => (
       <div>
-        {gallery.slice(0, 15)
+        {gallery.slice(0, limit)
           .map(({image, title, credit}) => (
           <div className='gallery-item' onClick={this.toggleModal}>
             <GalleryItem key={title} title={title} image={image} credit={credit} />

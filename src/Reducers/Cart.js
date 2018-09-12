@@ -2,7 +2,8 @@ import * as CartActionTypes from '../ActionTypes/Cart';
 
 const initialState = {
   cartProducts: [],
-  total:0
+  total:0,
+  isChecked: true
 }
 
 export default function Cart(state=initialState, action){

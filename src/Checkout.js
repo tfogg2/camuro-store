@@ -30,12 +30,15 @@ const onToken = (amount, description) => token =>
 
 const Checkout = ({ name, description, amount }) =>
   <StripeCheckout
+    image="https://stripe.com/img/documentation/checkout/marketplace.png"
     name={name}
     description={description}
     amount={fromDollarToCent(amount)}
     token={onToken(amount, description)}
     currency={CURRENCY}
     stripeKey={STRIPE_PUBLISHABLE}
+    billingAddress={true}
+    shippingAddress={true}
   />
 
 export default Checkout;

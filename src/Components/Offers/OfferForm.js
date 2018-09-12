@@ -188,7 +188,7 @@ class OfferForm extends Component {
       <div className="sell-content">
         <div className="sell-form-content">
           <h1>Get An Offer</h1>
-          <span>* We will never sell or distribute your information.</span>
+          <span>* We will never sell or share your information.</span>
           <form className="sell-form" id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <div className="personal-info">
               <h4>Contact Info</h4>

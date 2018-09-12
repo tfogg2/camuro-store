@@ -24,6 +24,13 @@ class Header extends Component {
                   </button>
                 </NavLink>
               </li>
+              <li className="scrollLink">
+                <NavLink to="/offer">
+                  <button>
+                    Sell
+                  </button>
+                </NavLink>
+              </li>
               <li className="scrollLink no-mobile">
                 <NavLink to="/gallery">
                   <button>
@@ -31,17 +38,12 @@ class Header extends Component {
                   </button>
                 </NavLink>
               </li>
-              <li className="scrollLink no-mobile">
-                <NavLink to="/offer">
+              <li>
+                <NavLink to="/cart">
                   <button>
-                    Sell Gear
+                    Cart
                   </button>
                 </NavLink>
-              </li>
-              <li className="insta-link">
-                <a href="https://www.instagram.com/camuroco/" target="_blank" alt="camuro-instagram" >
-                  <div className="instagram"></div>
-                </a>
               </li>
             </ul>
           </div>

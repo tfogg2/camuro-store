@@ -72,7 +72,6 @@ class Products extends Component {
                   <div className="backdrop product-backdrop">
                     <div className="modal-header">
                       <span className="close-modal" onClick={this.toggleModal}><img src={require('../../Assets/back-arrow.svg')} alt="back-arrow"/></span>
-                      <h2 className="modal-header-title">{title}</h2>
                       <Link to={`/cart`} className="add-product" onClick={ () => this.props.addProduct(title, product, description, price, index, image)}>
                         <button className="addProductBtn">Add Product</button>
                       </Link>

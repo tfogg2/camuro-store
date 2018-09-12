@@ -32,6 +32,7 @@ class ProductModal extends Component {
       <div className={modalClass} onClick={this.props.stopClose}>
         <img src={this.props.image} alt={this.props.title} />
         <div className="product-info">
+          <h2 className="modal-header-title">{this.props.title}</h2>
           <span><b>${this.props.price}</b></span>
           <p>{this.props.description}</p>
         </div>
